@@ -16,6 +16,8 @@ from rasa_nlu.classifiers.keyword_intent_classifier import \
 from rasa_nlu.classifiers.mitie_intent_classifier import MitieIntentClassifier
 from rasa_nlu.classifiers.sklearn_intent_classifier import \
     SklearnIntentClassifier
+from rasa_nlu.classifiers.my_sklearn_intent_classifier import \
+    MySklearnIntentClassifier
 from rasa_nlu.extractors.crf_entity_extractor import CRFEntityExtractor
 from rasa_nlu.extractors.duckling_http_extractor import DucklingHTTPExtractor
 from rasa_nlu.extractors.entity_synonyms import EntitySynonymMapper
@@ -57,7 +59,7 @@ component_classes = [
     CountVectorsFeaturizer,
     # classifiers
     SklearnIntentClassifier, MitieIntentClassifier, KeywordIntentClassifier,
-    EmbeddingIntentClassifier
+    EmbeddingIntentClassifier, MySklearnIntentClassifier
 ]
 
 # Mapping from a components name to its class to allow name based lookup.
@@ -82,6 +84,7 @@ old_style_names = {
     "tokenizer_whitespace": "WhitespaceTokenizer",
     "tokenizer_jieba": "JiebaTokenizer",
     "intent_classifier_sklearn": "SklearnIntentClassifier",
+    "intent_my_classifier_sklearn": "MySklearnIntentClassifier",
     "intent_classifier_mitie": "MitieIntentClassifier",
     "intent_classifier_keyword": "KeywordIntentClassifier",
     "intent_classifier_tensorflow_embedding": "EmbeddingIntentClassifier"
