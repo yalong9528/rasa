@@ -37,7 +37,7 @@ def _sklearn_numpy_warning_fix():
 class MySklearnIntentClassifier(Component):
     """Intent classifier using the sklearn framework"""
 
-    name = "my_intent_classifier_sklearn"
+    name = "intent_my_classifier_sklearn"
 
     provides = ["intent", "intent_ranking"]
 
