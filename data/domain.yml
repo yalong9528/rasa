@@ -1,0 +1,59 @@
+intents:
+  - affirm
+  - affirm_know
+  - inform_dontknow
+  - reqmore_when
+  - reqmore_doubt
+  - reqmore_what
+  - reqmore_speak
+  - reqmore_who
+  - inform_busy
+  - wrongcall
+  - refuse
+  - family_friend
+  - busyother
+  - reqmore_amount
+  - repeat
+  - repeat_nohear
+  - affirm_self
+  - affirm_receive_reminder
+  - repayment_today
+  - cantrepayment
+  - shortofmoney
+  - out_of_scope
+
+actions:
+  - utter_remind_repayment
+  - utter_noinput
+  - utter_nomatch
+  - utter_repeat_hear
+  - utter_receive_goodbey
+  - utter_comfirm_debtor_retry
+  - utter_notdebtor_reminder
+  - utter_remind_repayment_byff
+  - utter_remind_repayment_byother
+  - utter_remind_repayment_retry
+  - utter_remind_repayment_datenotconfirmed
+  - utter_response_dateamount
+
+templates:
+  utter_remind_repayment:
+    - "您好这里是翼龙贷，XXX先生，您有一笔贷款即将到期，到期日是X月X日，请登录手机客户端APP或翼龙贷网站，查看还款情况及时还款，请问您已知晓还款时间了吗？"
+  utter_repeat_hear:
+    - "不好意思，我没听清。"
+  utter_receive_goodbey:
+    - "好的，已收到您的回复，请您记得按时还款。如您对还款内容还有疑问，请关注XXX进行咨询。感谢您的接听，再见。"
+  utter_comfirm_debtor_retry:
+    - "这里是翼龙贷总部，您是XXX本人么？"
+  utter_notdebtor_reminder:
+    - "哦，是这样的。有人在我们平台借款，注册和申请都是使用您这个手机号码。现在这笔借款即将到期，如您是借款人本人，请尽快查看贷款记录，在到期日之前完成还款。如您不是本人，这边有理由怀疑这笔借款存在欺诈风险。为了保护您的权益，请确保手机畅通，配合我们进行调查。感谢您的接听，再见。"
+  utter_remind_repayment_byff:
+    - "哦，是这样的。他在我们平台有一笔借款，即将到期。麻烦请您通知他，在到期日之前尽快完成还款操作。感谢您的帮忙，再见。"
+  utter_remind_repayment_byother:
+    - "哦，是这样的。他在我们平台有一笔借款，即将到期。麻烦请您通知他，在到期日之前尽快完成还款操作。感谢您的帮忙，再见。"
+  utter_remind_repayment_retry:
+    - "这里是翼龙贷总部，XXX有一笔贷款，即将到期。到期日是X月X日，如您不是他本人，请代为转达。如您是本人，且确认收到提醒，请说“确认”。"
+  utter_remind_repayment_datenotconfirmed:
+    - "再次提醒您，XXX有一笔贷款，即将到期。如您不是他本人，请代为转达。如您是本人，为了维护您的良好信用，请尽快确认还款时间，并及时还款。感谢您的接听，再见。"
+  utter_response_dateamount:
+    - "您的应还款金额为5000到期日是X月X日如您确认清楚还款到期时间，请说“确认”。"
