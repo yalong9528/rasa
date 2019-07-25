@@ -73,7 +73,7 @@ class JiebaTokenizer(Tokenizer, Component):
     def tokenize(text: Text) -> List[Token]:
         import jieba
 
-        tokenized = jieba.tokenize(text)
+        tokenized = jieba.tokenize(text,mode='search')
         tokens = [Token(word, start) for (word, start, end) in tokenized]
         return tokens
 
