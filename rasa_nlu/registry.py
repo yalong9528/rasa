@@ -18,6 +18,8 @@ from rasa_nlu.classifiers.sklearn_intent_classifier import \
     SklearnIntentClassifier
 from rasa_nlu.classifiers.my_sklearn_intent_classifier import \
     MySklearnIntentClassifier
+from rasa_nlu.classifiers.embedding_bert_intent_classifier import \
+    EmbeddingBertIntentClassifier
 from rasa_nlu.extractors.crf_entity_extractor import CRFEntityExtractor
 from rasa_nlu.extractors.duckling_http_extractor import DucklingHTTPExtractor
 from rasa_nlu.extractors.entity_synonyms import EntitySynonymMapper
@@ -29,6 +31,7 @@ from rasa_nlu.featurizers.mitie_featurizer import MitieFeaturizer
 from rasa_nlu.featurizers.ngram_featurizer import NGramFeaturizer
 from rasa_nlu.featurizers.regex_featurizer import RegexFeaturizer
 from rasa_nlu.featurizers.spacy_featurizer import SpacyFeaturizer
+from rasa_nlu.featurizers.bert_vectors_featurizer import BertVectorsFeaturizer
 from rasa_nlu.model import Metadata
 from rasa_nlu.tokenizers.jieba_tokenizer import JiebaTokenizer
 from rasa_nlu.tokenizers.mitie_tokenizer import MitieTokenizer
@@ -56,10 +59,10 @@ component_classes = [
     DucklingHTTPExtractor, EntitySynonymMapper,
     # featurizers
     SpacyFeaturizer, MitieFeaturizer, NGramFeaturizer, RegexFeaturizer,
-    CountVectorsFeaturizer,
+    CountVectorsFeaturizer, BertVectorsFeaturizer,
     # classifiers
     SklearnIntentClassifier, MitieIntentClassifier, KeywordIntentClassifier,
-    EmbeddingIntentClassifier, MySklearnIntentClassifier
+    EmbeddingIntentClassifier, MySklearnIntentClassifier, EmbeddingBertIntentClassifier
 ]
 
 # Mapping from a components name to its class to allow name based lookup.
